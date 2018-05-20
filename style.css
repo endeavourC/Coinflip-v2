@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+    background: #2a2b2b;
+
+}
+
+header {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+header h1 {
+    font-size: 5rem;
+    font-family: sans-serif;
+    color: #E4B363;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coinflip-animation {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5rem;
+    min-height: 50vh;
+    width: 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(cointheme.png);
+}
+
+.coinflip-animation img {
+    width: 100%;
+}
+
+.coinflip-counter {
+    font-size: 5rem;
+    color: #E4B363;
+}
+
+.coinflip-btns {
+    width: 50%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+#value-points {
+    height: 50px;
+    width: 200px;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    outline-color: #E4B363;
+    color: #2a2b2b;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    border: 0;
+
+}
+
+.roll-it {
+    font-size: 2rem;
+    font-family: sans-serif;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    margin: 1rem;
+    background: #E4B363;
+    color: #2a2b2b;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+}
+
+.false {
+    border: 0;
+    background: rgba( 220, 96, 96, 1);
+    animation-name: falsing;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+.true {
+    animation-name: roll;
+    animation-duration: .5s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease;
+}
+
+
+
+@keyframes falsing {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(50px);
+    }
+    30% {
+        transform: translateX(-50px);
+    }
+    45% {
+        transform: translateX(50px);
+    }
+    60% {
+        transform: translateX(-50px);
+    }
+    75% {
+        transform: translateX(50px);
+    }
+    100% {
+        trasnform: translateX(0px);
+    }
+
+
+}
+
+
+@keyframes roll {
+    0% {
+        background-image: url(coin.png);
+        transform: rotateY(0);
+    }
+    50% {
+        background-image: url(euro.png);
+        transform: rotateY(180deg);
+    }
+    100% {
+        background-image: url(coin.png);
+        transform: rotateY(360deg);
+
+    }
+
+}
